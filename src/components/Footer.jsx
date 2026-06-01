@@ -17,13 +17,15 @@ const navLinks = [
 ];
 
 const serviceLinks = [
-  { to: "/services/fssai-audit", label: "FSSAI Third Party Audit" },
-  { to: "/services/hra", label: "Hygiene Rating Audit" },
-  { to: "/services/zed", label: "ZED Assessment" },
-  { to: "/services/energy-audit", label: "Energy Audit" },
-  { to: "/services/fire-safety", label: "Fire Safety Inspection" },
-  { to: "/services/environmental-audit", label: "Environmental Audit" },
-  { to: "/services/eat-right", label: "Eat Right Initiative" },
+  { to: "/services/01", label: "FSSAI Third Party Audit" },
+  { to: "/services/02", label: "Hygiene Rating Audit" },
+  { to: "/services/03", label: "ZED Assessment" },
+  { to: "/services/04", label: "Energy Audit" },
+  { to: "/services/05", label: "Fire Safety Inspection" },
+  { to: "/services/06", label: "Environmental Audit" },
+  { to: "/services/07", label: "Eat Right Initiative" },
+    { to: "/services/08", label: "Safety Audit / Inspection" },
+      { to: "/services/09", label: "Verification & Validation" },
 ];
 
 const recognitions = [
