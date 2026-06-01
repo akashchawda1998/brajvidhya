@@ -383,7 +383,7 @@ const About = () => {
           <circle cx="12" cy="12" r="2" fill={C.gold} />
         </svg>
       ),
-      text: "Our mission is to establish ourselves as a trusted partner and industry leader in management system inspection, acknowledged by both our clients and the wider community. In addition to actively participating in the growth of accredited inspection and other assurance services, Brajvidhya Services also aims to be involved in the digital economy.",
+      text: "Our mission is to establish ourselves as a trusted partner and industry leader in Inspection & Certification and management system certification, acknowledged by both our clients and the wider community. In addition to actively participating in the growth of accredited Inspection & Certification and other assurance services, Brajvidhya Services also aims to be involved in the digital economy.",
     },
     vision: {
       icon: (
@@ -400,7 +400,7 @@ const About = () => {
           <circle cx="12" cy="12" r="3" />
         </svg>
       ),
-      text: "Brajvidhya Services Pvt. Ltd. aims to provide high-quality inspection services carried out with discretion, avoiding any conflicts of interest or impartiality — with the help of a team of experienced inspectors, industry experts and equipment conforming to the ISO/IEC 17020:2012 standard and industry regulations.",
+      text: "Brajvidhya Services Private Limited, through its independent entity – Brajvidhya Services Pvt Ltd (Inspection & Certification body) aims to provide high quality Inspection & Certification services that are carried out with discretion, avoiding any conflicts of interest or impartiality with the help of team of experienced inspectors, industry experts and equipment conforming to the ISO/IEC 17020:2012 & ISO 17021-1:2015 standards and industry regulations.",
     },
     values: {
       icon: (
@@ -587,7 +587,7 @@ const About = () => {
                   { label: "Certificate No.", value: "IB 145" },
                   { label: "Standard", value: "ISO/IEC 17020:2012" },
                   { label: "Type", value: "Type 'A' Inspection Body" },
-                  { label: "Initial Accreditation", value: "March 18, 2025" },
+                  // { label: "Initial Accreditation", value: "March 18, 2025" },
                   { label: "Valid Until", value: "March 17, 2028" },
                   { label: "FSSAI Ref.", value: "FSSAI/TPA/2025-25/07" },
                   { label: "Startup India", value: "DIPP174177" },
@@ -689,33 +689,33 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ValueCard
               iconKey="integrity"
-              title="Integrity"
-              desc="We uphold uncompromising integrity in every audit, ensuring unbiased and reliable assessments that our clients can trust completely."
+              title="Integrity Policy"
+              desc="Brajvidhya Services Private Limited is committed to maintaining the highest level of integrity in all inspection, audit, and certification activities. We conduct our services honestly, ethically, and professionally to ensure trust, transparency, and credibility."
             />
             <ValueCard
               iconKey="transparency"
-              title="Transparency"
-              desc="Every step of our process is documented and communicated clearly. We believe transparency builds lasting trust with clients and stakeholders."
+              title="Independence Policy"
+              desc="Brajvidhya Services Private Limited maintains complete independence in all inspection and certification activities. Our decisions are made without any commercial, financial, or external influence to ensure credibility, transparency, and reliability."
             />
             <ValueCard
               iconKey="accuracy"
-              title="Accuracy"
-              desc="Our team of certified professionals delivers precise, evidence-based findings conforming to ISO/IEC 17020:2012 and all applicable regulations."
+              title="Accuracy Policy"
+              desc="Brajvidhya Services Private Limited ensures that all inspection, audit, and certification results are accurate, reliable, and based on objective evidence and applicable standards. We strive to maintain consistency and technical competence in all our activities"
             />
             <ValueCard
               iconKey="impartiality"
-              title="Impartiality"
+              title="Impartiality Policy"
               desc="As an independent third-party body, we ensure complete freedom from conflicts of interest across all inspections and assessments."
             />
             <ValueCard
               iconKey="confidentiality"
-              title="Confidentiality"
-              desc="All client information and audit findings are handled with strict confidentiality and shared only with authorized individuals."
+              title="Confidentiality Policy"
+              desc="Brajvidhya Services Private Limited treats all client information, records, and reports as strictly confidential. Information obtained during inspections and certification activities is not disclosed to any third party without client consent, except where required by law or regulatory authorities."
             />
             <ValueCard
               iconKey="improvement"
-              title="Continuous Improvement"
-              desc="We use client feedback constructively to improve our services and maintain excellence in every engagement."
+              title="Continuous Improvement Policy"
+              desc="Brajvidhya Services Private Limited is committed to continual improvement in the quality and effectiveness of our inspection and certification services. We regularly review our processes, performance, and systems to enhance customer satisfaction, compliance, and operational excellence."
             />
           </div>
         </div>
@@ -836,7 +836,7 @@ const About = () => {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto items-stretch">
             {[
               {
                 name: "Brajvidhya Services Pvt. Ltd.",
@@ -848,18 +848,6 @@ const About = () => {
                   "Fire Safety Inspection",
                   "Energy Audit",
                   "ZED Assessment",
-                ],
-              },
-              {
-                name: "Trumentor Consultant India Pvt. Ltd.",
-                role: "Consulting Arm — CEO",
-                num: "02",
-                services: [
-                  "EIA (Environment Impact Assessment)",
-                  "ZED & LEAN Consultancy",
-                  "Food Consultancy",
-                  "ISO Consultancy & Implementation",
-                  "E-Documentation",
                 ],
               },
               {
@@ -984,7 +972,7 @@ const About = () => {
               {
                 name: "Hari Singh Kaurav",
                 role: "Managing Director",
-                email: "Harisingh.kaurav@gmail.com",
+                email: "harisingh.kaurav@gmail.com",
                 img: owner2,
               },
             ].map((p) => (

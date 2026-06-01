@@ -6,6 +6,8 @@ import ifeLogo from "../assets/accreditations/ife.png";
 import beeLogo from "../assets/accreditations/bee.png";
 import msmeLogo from "../assets/accreditations/msme.png";
 import logo from "../assets/logos/finalLogo.jpeg";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
@@ -143,6 +145,25 @@ const Footer = () => {
                 </span>
                 <span>info@brajvidhya.com</span>
               </div>
+              <div className="flex items-center gap-4 pt-6">
+                <a
+                  href=" https://www.instagram.com/brajvidhya_services_pvt.ltd?igsh=YTRrd2cybnoyN3ll"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full border border-[#b8962e] flex items-center justify-center text-[#b8962e] hover:bg-[#b8962e] hover:text-white transition-all duration-300"
+                >
+                  <FaFacebookF size={16} />
+                </a>
+
+                <a
+                  href="https://www.facebook.com/profile.php?id=61580142795011"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full border border-[#b8962e] flex items-center justify-center text-[#b8962e] hover:bg-[#b8962e] hover:text-white transition-all duration-300"
+                >
+                  <FaInstagram size={16} />
+                </a>
+              </div>
               {/* <div className="flex items-center gap-2.5 text-[#6a8a7a]">
                 <span className="text-[#b8962e]">
                   <svg
@@ -266,7 +287,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-4">
             <Link
-              to="/about"
+              to="/privacy-policy"
               className="text-[#4a6a5a] text-xs hover:text-[#b8962e] transition-colors duration-300"
             >
               Privacy Policy

@@ -6,6 +6,9 @@ const ServiceCard = ({ service, index }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
+      <Link
+           to={`/services/${service.num}`}
+        >
     <div
       className="relative rounded-2xl overflow-hidden cursor-pointer"
       style={{
@@ -104,6 +107,7 @@ const ServiceCard = ({ service, index }) => {
         </Link>
       </div>
     </div>
+    </Link>
   );
 };
 

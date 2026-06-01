@@ -8,6 +8,7 @@ const navLinks = [
   { to: "/services", label: "Services" },
   { to: "/goal", label: "Goal" },
   { to: "/contact", label: "Contact" },
+  { to: "/grievance", label: "Grievance" },
 ];
 
 const NavLink = ({ to, label, pathname }) => {
@@ -75,7 +76,7 @@ const Navbar = () => {
       {/* ── DESKTOP BAR ── */}
       <div className="hidden md:grid max-w-[1280px] mx-auto grid-cols-[1fr_auto_1fr] items-center px-6 h-[76px]">
         <nav className="flex items-center justify-end gap-10 pr-10">
-          {navLinks.slice(0, 2).map((link) => (
+          {navLinks.slice(0, 3).map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
@@ -94,7 +95,7 @@ const Navbar = () => {
         </Link>
 
         <nav className="flex items-center justify-start gap-10 pl-10">
-          {navLinks.slice(2).map((link) => (
+          {navLinks.slice(3).map((link) => (
             <NavLink
               key={link.to}
               to={link.to}

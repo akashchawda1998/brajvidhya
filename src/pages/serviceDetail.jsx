@@ -209,6 +209,977 @@ const ServiceDetail = () => {
                     ))}
                   </div>
                 </div>
+
+                {service.detailContent && (
+                  <div className="mt-16">
+                    {/* INTRODUCTION */}
+                    <h3
+                      className="text-2xl font-black mb-6"
+                      style={{ color: C.green }}
+                    >
+                      Introduction
+                    </h3>
+
+                    <p
+                      className="leading-8 text-[15px]"
+                      style={{ color: C.muted }}
+                    >
+                      {service.detailContent.introduction}
+                    </p>
+
+                    {/* OBJECTIVES */}
+                    <h3
+                      className="text-2xl font-black mt-12 mb-6"
+                      style={{ color: C.green }}
+                    >
+                      {service.num === "01"
+                        ? "Objectives of FSSAI Third Party Audit"
+                        : service.num === "02"
+                          ? "Objectives of Hygiene Rating Audit"
+                          : service.num === "03"
+                            ? "ZED Assessment Overview"
+                            : service.num === "04"
+                              ? "Energy Audit Objectives"
+                              : service.num === "06"
+                                ? "Environmental Audit Objectives"
+                                : service.num === "08"
+                                  ? "Safety Audit Objectives"
+                                  : service.num === "09"
+                                    ? "Verification & Validation Objectives"
+                                    : service.num === "07"
+                                      ? "Eat Right Initiative Objectives"
+                                      : "Service Overview"}
+                    </h3>
+
+                    <ul className="space-y-3">
+                      {service.detailContent.objectives?.map((item, index) => (
+                        <li key={index} className="flex gap-3">
+                          <span style={{ color: C.gold }}>✓</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* FSSAI THIRD PARTY AUDIT */}
+                    {service.num === "01" && (
+                      <>
+                        {/* Compliance */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Compliance Requirements
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.complianceRequirements.map(
+                            (item, index) => (
+                              <div
+                                key={index}
+                                className="p-4 rounded-xl"
+                                style={{
+                                  background: "#faf6ef",
+                                  border: "1px solid #eee3d3",
+                                }}
+                              >
+                                {item}
+                              </div>
+                            )
+                          )}
+                        </div>
+
+                        {/* Audit Coverage */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Audit Coverage
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.auditCoverage.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Manufacturing Table */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Manufacturing Audit Man-Day Estimation
+                        </h3>
+
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse">
+                            <thead>
+                              <tr
+                                style={{
+                                  background: C.green,
+                                  color: "white",
+                                }}
+                              >
+                                <th className="p-4 text-left">
+                                  Food Handlers
+                                </th>
+                                <th className="p-4 text-left">
+                                  Production Lines
+                                </th>
+                                <th className="p-4 text-left">
+                                  Man-Days
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              {service.detailContent.manufacturingTable.map(
+                                (row, i) => (
+                                  <tr
+                                    key={i}
+                                    style={{
+                                      borderBottom:
+                                        "1px solid #eee3d3",
+                                    }}
+                                  >
+                                    <td className="p-4">
+                                      {row.handlers}
+                                    </td>
+                                    <td className="p-4">
+                                      {row.lines}
+                                    </td>
+                                    <td className="p-4">
+                                      {row.mandays}
+                                    </td>
+                                  </tr>
+                                )
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+
+                        {/* Catering Table */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Catering / Restaurant Audit
+                        </h3>
+
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse">
+                            <thead>
+                              <tr
+                                style={{
+                                  background: C.green,
+                                  color: "white",
+                                }}
+                              >
+                                <th className="p-4 text-left">
+                                  Food Handlers
+                                </th>
+                                <th className="p-4 text-left">
+                                  Man-Days
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              {service.detailContent.cateringTable.map(
+                                (row, i) => (
+                                  <tr
+                                    key={i}
+                                    style={{
+                                      borderBottom:
+                                        "1px solid #eee3d3",
+                                    }}
+                                  >
+                                    <td className="p-4">
+                                      {row.handlers}
+                                    </td>
+                                    <td className="p-4">
+                                      {row.mandays}
+                                    </td>
+                                  </tr>
+                                )
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+
+                        {/* Storage Table */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Warehouse / Storage Audit
+                        </h3>
+
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse">
+                            <thead>
+                              <tr
+                                style={{
+                                  background: C.green,
+                                  color: "white",
+                                }}
+                              >
+                                <th className="p-4 text-left">
+                                  Area (Sq Ft)
+                                </th>
+                                <th className="p-4 text-left">
+                                  Man-Days
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              {service.detailContent.storageTable.map(
+                                (row, i) => (
+                                  <tr
+                                    key={i}
+                                    style={{
+                                      borderBottom:
+                                        "1px solid #eee3d3",
+                                    }}
+                                  >
+                                    <td className="p-4">
+                                      {row.area}
+                                    </td>
+                                    <td className="p-4">
+                                      {row.mandays}
+                                    </td>
+                                  </tr>
+                                )
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+                      </>
+                    )}
+
+                    {/* HYGIENE RATING AUDIT */}
+                    {service.num === "02" && (
+                      <>
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Purpose of the Scheme
+                        </h3>
+
+                        <ul className="space-y-3">
+                          {service.detailContent.purposes.map(
+                            (item, index) => (
+                              <li
+                                key={index}
+                                className="flex gap-3"
+                              >
+                                <span
+                                  style={{ color: C.gold }}
+                                >
+                                  ✓
+                                </span>
+                                <span>{item}</span>
+                              </li>
+                            )
+                          )}
+                        </ul>
+
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Eligible Food Businesses
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.businessTypes.map(
+                            (item, index) => (
+                              <div
+                                key={index}
+                                className="p-4 rounded-xl"
+                                style={{
+                                  background: "#faf6ef",
+                                  border:
+                                    "1px solid #eee3d3",
+                                }}
+                              >
+                                {item}
+                              </div>
+                            )
+                          )}
+                        </div>
+
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Hygiene Rating Scale
+                        </h3>
+
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse">
+                            <thead>
+                              <tr
+                                style={{
+                                  background: C.green,
+                                  color: "white",
+                                }}
+                              >
+                                <th className="p-4 text-left">
+                                  Rating
+                                </th>
+                                <th className="p-4 text-left">
+                                  Category
+                                </th>
+                                <th className="p-4 text-left">
+                                  % Score
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              {service.detailContent.ratingTable.map(
+                                (row, i) => (
+                                  <tr
+                                    key={i}
+                                    style={{
+                                      borderBottom:
+                                        "1px solid #eee3d3",
+                                    }}
+                                  >
+                                    <td className="p-4">
+                                      {row.rating}
+                                    </td>
+                                    <td className="p-4">
+                                      {row.category}
+                                    </td>
+                                    <td className="p-4">
+                                      {row.score}
+                                    </td>
+                                  </tr>
+                                )
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+                      </>
+                    )}
+
+                    {service.num === "03" && (
+                      <>
+                        {/* Benefits */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Benefits of ZED Certification
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.benefits.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Why Choose Us */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Why Choose Brajvidhya Services
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.whyChooseUs.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Process Flow */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          ZED Assessment Flow Process
+                        </h3>
+
+                        <div className="space-y-5">
+                          {service.detailContent.processFlow.map((step) => (
+                            <div
+                              key={step.step}
+                              className="p-5 rounded-2xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              <div className="flex items-center gap-3 mb-3">
+                                <div
+                                  className="w-10 h-10 rounded-full flex items-center justify-center font-bold"
+                                  style={{
+                                    background: C.green,
+                                    color: "white",
+                                  }}
+                                >
+                                  {step.step}
+                                </div>
+
+                                <h4
+                                  className="font-bold text-lg"
+                                  style={{ color: C.textDk }}
+                                >
+                                  {step.title}
+                                </h4>
+                              </div>
+
+                              <p style={{ color: C.muted }}>
+                                {step.description}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
+
+                    {service.num === "04" && (
+                      <>
+                        {/* Services Included */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Our Services Include
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.services?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Benefits */}
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Key Benefits
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.benefits?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <div
+                          className="mt-8 p-6 rounded-2xl"
+                          style={{
+                            background: "#faf6ef",
+                            border: "1px solid #eee3d3",
+                          }}
+                        >
+                          <h4
+                            className="font-bold text-lg mb-3"
+                            style={{ color: C.green }}
+                          >
+                            Sustainable Energy Management
+                          </h4>
+
+                          <p style={{ color: C.muted }}>
+                            With advanced tools and experienced professionals, we help
+                            organizations achieve sustainable energy management,
+                            optimize power consumption, reduce energy costs, and
+                            improve overall operational performance.
+                          </p>
+                        </div>
+                      </>
+                    )}
+
+                    {service.num === "06" && (
+                      <>
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Our Services Include
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.services?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Key Benefits
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.benefits?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <div
+                          className="mt-8 p-6 rounded-2xl"
+                          style={{
+                            background: "#faf6ef",
+                            border: "1px solid #eee3d3",
+                          }}
+                        >
+                          <h4
+                            className="font-bold text-lg mb-3"
+                            style={{ color: C.green }}
+                          >
+                            Sustainable Environmental Management
+                          </h4>
+
+                          <p style={{ color: C.muted }}>
+                            Brajvidhya Services is committed to creating environmentally
+                            responsible and sustainable solutions for industries and
+                            institutions through professional environmental audits,
+                            compliance reviews, and sustainability improvement programs.
+                          </p>
+                        </div>
+                      </>
+                    )}
+
+                    {service.num === "08" && (
+                      <>
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Safety Audit & Inspection Services
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.services?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          What Comes Under Safety Audit & Inspection?
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.coverage?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <div
+                          className="mt-8 p-6 rounded-2xl"
+                          style={{
+                            background: "#faf6ef",
+                            border: "1px solid #eee3d3",
+                          }}
+                        >
+                          <h4
+                            className="font-bold text-lg mb-3"
+                            style={{ color: C.green }}
+                          >
+                            Building a Safer Workplace
+                          </h4>
+
+                          <p style={{ color: C.muted }}>
+                            Brajvidhya Services Private Limited is committed to
+                            delivering reliable safety solutions that help
+                            organizations create safer workplaces, improve
+                            compliance, reduce risks, and achieve operational
+                            excellence.
+                          </p>
+                        </div>
+                      </>
+                    )}
+
+                    {service.num === "07" && (
+                      <>
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          What is Included in Eat Right Initiative?
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.services?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          What Comes Under Eat Right Initiative?
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.coverage?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Fee Structure for ERI
+                        </h3>
+
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse">
+                            <thead>
+                              <tr
+                                style={{
+                                  background: C.green,
+                                  color: "white",
+                                }}
+                              >
+                                <th className="p-4 text-left">SR No.</th>
+                                <th className="p-4 text-left">Initiative</th>
+                                <th className="p-4 text-left">Fee</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              {service.detailContent.feeTable?.map((row, index) => (
+                                <tr
+                                  key={index}
+                                  style={{
+                                    borderBottom: "1px solid #eee3d3",
+                                  }}
+                                >
+                                  <td className="p-4">{index + 1}</td>
+                                  <td className="p-4">{row.initiative}</td>
+                                  <td className="p-4">{row.fee}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div
+                          className="mt-6 p-5 rounded-xl"
+                          style={{
+                            background: "#fff8e7",
+                            border: `1px solid ${C.gold}40`,
+                          }}
+                        >
+                          <p>
+                            <strong>GST:</strong> 18% Applicable
+                          </p>
+
+                          <p className="mt-2">
+                            Auditor travel and other expenses would be additional.
+                          </p>
+                        </div>
+
+                        <div
+                          className="mt-8 p-6 rounded-2xl"
+                          style={{
+                            background: "#faf6ef",
+                            border: "1px solid #eee3d3",
+                          }}
+                        >
+                          <h4
+                            className="font-bold text-lg mb-3"
+                            style={{ color: C.green }}
+                          >
+                            Building Healthier Communities
+                          </h4>
+
+                          <p style={{ color: C.muted }}>
+                            Brajvidhya Services Private Limited is committed to supporting
+                            healthier communities through responsible food safety,
+                            nutrition awareness, and sustainable food practices.
+                          </p>
+                        </div>
+                      </>
+                    )}
+
+                    {service.num === "09" && (
+                      <>
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          Verification & Validation Services
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.services?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          What Comes Under Verification & Validation?
+                        </h3>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {service.detailContent.coverage?.map((item, index) => (
+                            <div
+                              key={index}
+                              className="p-4 rounded-xl"
+                              style={{
+                                background: "#faf6ef",
+                                border: "1px solid #eee3d3",
+                              }}
+                            >
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+
+                        <div
+                          className="mt-8 p-6 rounded-2xl"
+                          style={{
+                            background: "#faf6ef",
+                            border: "1px solid #eee3d3",
+                          }}
+                        >
+                          <h4
+                            className="font-bold text-lg mb-3"
+                            style={{ color: C.green }}
+                          >
+                            Quality Assurance & Continuous Improvement
+                          </h4>
+
+                          <p style={{ color: C.muted }}>
+                            Brajvidhya Services Private Limited is committed to delivering
+                            accurate, transparent, and reliable Verification & Validation
+                            services that support quality assurance, operational excellence,
+                            regulatory compliance, and continuous improvement across
+                            various sectors.
+                          </p>
+                        </div>
+                      </>
+                    )}
+
+                    {/* FEE TABLE */}
+                    {!["03", "04", "06", "07", "08", "09"].includes(service.num) && (
+                      <>
+                        <h3
+                          className="text-2xl font-black mt-12 mb-6"
+                          style={{ color: C.green }}
+                        >
+                          {service.num === "01"
+                            ? "Audit Fee Structure"
+                            : "Man-Day Calculation & Fee Structure"}
+                        </h3>
+
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse">
+                            <thead>
+                              <tr
+                                style={{
+                                  background: C.green,
+                                  color: "white",
+                                }}
+                              >
+                                <th className="p-4 text-left">
+                                  Food Handlers
+                                </th>
+                                <th className="p-4 text-left">
+                                  Man-Days
+                                </th>
+                                <th className="p-4 text-left">
+                                  Audit Fee
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              {service.detailContent.feeTable.map(
+                                (row, i) => (
+                                  <tr
+                                    key={i}
+                                    style={{
+                                      borderBottom:
+                                        "1px solid #eee3d3",
+                                    }}
+                                  >
+                                    <td className="p-4">
+                                      {row.handlers}
+                                    </td>
+                                    <td className="p-4">
+                                      {row.mandays}
+                                    </td>
+                                    <td className="p-4">
+                                      {row.fee}
+                                    </td>
+                                  </tr>
+                                )
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+
+
+                        {/* NOTE */}
+                        <div
+                          className="mt-6 p-5 rounded-xl"
+                          style={{
+                            background: "#fff8e7",
+                            border: `1px solid ${C.gold}40`,
+                          }}
+                        >
+                          {service.num === "01" ? (
+                            <>
+                              <p>
+                                <strong>GST:</strong> 18%
+                                applicable.
+                              </p>
+
+                              <p className="mt-2">
+                                Auditor travel and other
+                                expenses will be charged
+                                additionally.
+                              </p>
+
+                              <p className="mt-2">
+                                For Government tenders and
+                                related assignments, pricing
+                                will be as per applicable
+                                government norms.
+                              </p>
+                            </>
+                          ) : (
+                            <>
+                              <strong>Note:</strong> Auditor
+                              travel and accommodation
+                              charges will be applicable on
+                              actual basis. GST @ 18%
+                              extra.
+                            </>
+                          )}
+                        </div>
+                      </>
+                    )}
+
+                  </div>
+                )}
               </div>
             </div>
           </div>

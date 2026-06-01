@@ -35,6 +35,143 @@ export const services = [
       "Detailed non-conformance reports",
       "Post-audit corrective action guidance",
     ],
+    detailContent: {
+      introduction: `
+Brajvidhya Services Private Limited is engaged in conducting FSSAI Third Party Audits for Food Business Operators (FBOs) as per the guidelines and requirements of the Food Safety and Standards Authority of India (FSSAI).
+
+Our audit services are designed to assess the implementation and effectiveness of Food Safety Management Systems (FSMS) in food manufacturing, processing, storage, distribution, catering, and retail establishments.
+    `,
+
+      complianceRequirements: [
+        "Food Safety and Standards Act & Regulations",
+        "Schedule 4 requirements of FSSAI",
+        "Good Manufacturing Practices (GMP)",
+        "Good Hygiene Practices (GHP)",
+        "Food Safety Management System requirements"
+      ],
+
+      auditCoverage: [
+        "Infrastructure and facility hygiene",
+        "Personal hygiene practices",
+        "Process control and operational management",
+        "Cleaning and sanitation systems",
+        "Pest control management",
+        "Documentation and record maintenance",
+        "Traceability and product recall system",
+        "Storage, transportation and handling practices"
+      ],
+
+      objectives: [
+        "Ensure implementation of GMP and GHP.",
+        "Evaluate effectiveness of Food Safety Management Systems.",
+        "Identify gaps, non-conformities and food safety risks.",
+        "Improve hygiene and sanitation conditions.",
+        "Promote safe manufacturing, handling, storage and distribution.",
+        "Strengthen consumer confidence through safe food practices.",
+        "Encourage continuous improvement and regulatory compliance.",
+        "Support regulatory authorities in enhancing food safety standards."
+      ],
+
+      manufacturingTable: [
+        {
+          handlers: "0-50",
+          lines: "1",
+          mandays: "0.5"
+        },
+        {
+          handlers: "51-100",
+          lines: "1-2",
+          mandays: "1"
+        },
+        {
+          handlers: "101-300",
+          lines: "4",
+          mandays: "1.5"
+        },
+        {
+          handlers: "301-600",
+          lines: "6",
+          mandays: "2"
+        },
+        {
+          handlers: "601-1000",
+          lines: "8",
+          mandays: "2.5"
+        },
+        {
+          handlers: ">1000",
+          lines: "10+",
+          mandays: "3"
+        }
+      ],
+
+      cateringTable: [
+        {
+          handlers: "0-25",
+          mandays: "0.5"
+        },
+        {
+          handlers: "26-50",
+          mandays: "1"
+        },
+        {
+          handlers: "51-100",
+          mandays: "1.5"
+        },
+        {
+          handlers: "101-1000",
+          mandays: "2"
+        }
+      ],
+
+      storageTable: [
+        {
+          area: "<15000",
+          mandays: "0.5"
+        },
+        {
+          area: "15001-50000",
+          mandays: "1"
+        },
+        {
+          area: ">50000",
+          mandays: "1.5"
+        }
+      ],
+
+      feeTable: [
+        {
+          handlers: "0-50",
+          mandays: "0.5",
+          fee: "₹9,000"
+        },
+        {
+          handlers: "51-100",
+          mandays: "1",
+          fee: "₹12,000"
+        },
+        {
+          handlers: "101-300",
+          mandays: "1.5",
+          fee: "₹15,000"
+        },
+        {
+          handlers: "301-600",
+          mandays: "2",
+          fee: "₹20,000"
+        },
+        {
+          handlers: "601-1000",
+          mandays: "2.5",
+          fee: "₹25,000"
+        },
+        {
+          handlers: ">1000",
+          mandays: "3",
+          fee: "₹28,000"
+        }
+      ]
+    },
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -58,6 +195,68 @@ export const services = [
     title: "Hygiene Rating Audit (HRA)",
     shortDesc:
       "FSSAI's transparent scoring scheme that rates food establishments on a 1–5 smiley scale.",
+
+    detailContent: {
+      introduction: `
+Brajvidhya Services Private Limited is engaged in conducting Hygiene Rating Audits for Food Business Operators (FBOs) in accordance with the guidelines and requirements prescribed by the Food Safety and Standards Authority of India (FSSAI).
+
+The Hygiene Rating Scheme aims to promote food safety, improve hygiene practices, and create consumer awareness regarding food hygiene standards.
+
+Our organization provides professional, transparent, and impartial audit services through qualified and trained auditors to assess compliance with food safety and hygiene requirements.
+  `,
+
+      objectives: [
+        "To evaluate the hygiene and sanitary conditions of food establishments.",
+        "To ensure compliance with FSSAI Food Safety & Hygiene Regulations.",
+        "To enhance consumer confidence in food businesses.",
+        "To encourage food establishments to adopt best hygiene practices.",
+        "To identify gaps and recommend corrective actions for continual improvement.",
+        "To support the Eat Right India initiative of FSSAI."
+      ],
+
+      purposes: [
+        "Encourage food businesses to maintain high hygiene standards and showcase them to consumers.",
+        "Motivate food businesses with lower hygiene standards to improve.",
+        "Allow consumers to make informed food choices and cultivate responsible eating habits."
+      ],
+
+      businessTypes: [
+        "Hotels",
+        "Restaurants",
+        "Cafeterias",
+        "Dhabas",
+        "Bakeries",
+        "Meat Retail Shops",
+        "Sweet Shops (Mithai Shops)"
+      ],
+
+      ratingTable: [
+        { rating: 5, category: "Excellent", score: "81 - 100%" },
+        { rating: 4, category: "Very Good", score: "61 - 80%" },
+        { rating: 3, category: "Good", score: "41 - 60%" },
+        { rating: 2, category: "Needs Improvement", score: "21 - 40%" },
+        { rating: 1, category: "Urgent Improvement", score: "20% or below" },
+      ],
+
+      feeTable: [
+        {
+          handlers: "< 50",
+          mandays: "0.5",
+          fee: "₹8,000"
+        },
+        {
+          handlers: "< 100",
+          mandays: "1",
+          fee: "₹12,000"
+        },
+        {
+          handlers: "> 100",
+          mandays: "1.5",
+          fee: "₹15,000"
+        }
+      ]
+    },
+
     points: [
       "Hotels, restaurants & dhabas",
       "1–5 smiley hygiene scoring",
@@ -94,6 +293,73 @@ export const services = [
       "QCI-approved assessment body",
       "On-site evaluation",
     ],
+    detailContent: {
+      introduction: `
+Brajvidhya Services Private Limited provides professional consultancy and assessment support services for MSMEs under the Government of India's Zero Defect Zero Effect (ZED) Certification Scheme.
+
+The ZED Scheme, promoted by the Ministry of MSME, aims to enhance quality, productivity, environmental sustainability, and global competitiveness of Indian MSMEs.
+
+Our organization is committed to supporting industries in adopting world-class manufacturing practices while ensuring minimal environmental impact through structured implementation and continuous improvement approaches.
+    `,
+
+      benefits: [
+        "Improved product quality",
+        "Enhanced operational efficiency",
+        "Reduced rejection and wastage",
+        "Better environmental sustainability",
+        "Increased customer confidence",
+        "Competitive advantage in domestic and international markets",
+        "Access to government support and incentives"
+      ],
+
+      whyChooseUs: [
+        "Experienced professionals in quality and compliance systems",
+        "Practical industry-oriented implementation approach",
+        "Strong understanding of MSME operational challenges",
+        "Focus on sustainable and process-driven improvements",
+        "Dedicated support throughout the ZED assessment journey",
+        "Commitment to transparency, professionalism, and timely execution"
+      ],
+
+      processFlow: [
+        {
+          step: "1",
+          title: "ZED Pledge & Registration",
+          description:
+            "The MSME pledges to uphold quality and environmental standards and registers on the ZED portal using Udyam Registration."
+        },
+        {
+          step: "2",
+          title: "Self Assessment",
+          description:
+            "Online questionnaire submission to evaluate maturity level and desired certification level."
+        },
+        {
+          step: "3",
+          title: "Desktop Assessment",
+          description:
+            "Assessment of uploaded documents and evidence remotely for completeness and conformance."
+        },
+        {
+          step: "4",
+          title: "On-Site Assessment",
+          description:
+            "Certified assessors conduct a physical assessment visit to verify implementation."
+        },
+        {
+          step: "5",
+          title: "NC Closure",
+          description:
+            "Non-conformities are addressed and closed within the specified timeline."
+        },
+        {
+          step: "6",
+          title: "Certification & Reporting",
+          description:
+            "Final certification is issued after successful evaluation and review."
+        }
+      ]
+    },
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -112,13 +378,53 @@ export const services = [
   {
     num: "04",
     badgeImg: beeLogo,
-    title: "Energy Audit / Inspection",
-    shortDesc: "Systematic inspection and analysis of energy flows.",
+    title: "Energy Audit / Inspection (Non - NABC Accredited)",
+    shortDesc:
+      "Systematic inspection and analysis of energy flows.",
+
     points: [
       "Industrial facility audits",
       "Energy flow mapping",
       "Savings roadmap",
     ],
+
+    detailContent: {
+      introduction: `
+At Brajvidhya Services Private Limited, we provide comprehensive Energy Audit and Inspection services to help industries, commercial establishments, and institutions optimize energy consumption, reduce operational costs, and improve overall efficiency.
+
+Our expert team conducts detailed assessments of electrical systems, equipment performance, power quality, and energy utilization patterns. We identify energy losses, recommend cost-effective energy-saving solutions, and ensure compliance with applicable standards and safety regulations.
+    `,
+
+      objectives: [
+        "Optimize energy consumption",
+        "Reduce operational costs",
+        "Improve energy efficiency",
+        "Identify energy losses and wastage",
+        "Enhance equipment performance",
+        "Support sustainable energy management"
+      ],
+
+      services: [
+        "Electrical Energy Audit",
+        "Power Quality Analysis",
+        "Load Assessment & Optimization",
+        "Energy Efficiency Inspection",
+        "Thermal Scanning & Preventive Inspection",
+        "Energy Saving Recommendations",
+        "Compliance & Safety Evaluation"
+      ],
+
+      benefits: [
+        "Reduced energy consumption",
+        "Lower operating costs",
+        "Improved system reliability",
+        "Better power quality",
+        "Enhanced equipment lifespan",
+        "Compliance with energy regulations",
+        "Sustainable operational performance"
+      ]
+    },
+
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -129,8 +435,7 @@ export const services = [
         strokeLinejoin="round"
         className="w-7 h-7"
       >
-        {" "}
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />{" "}
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
   },
@@ -158,15 +463,54 @@ export const services = [
   {
     num: "06",
     badgeImg: envLogo,
-    title: "Environmental Audit",
+    title: "Environmental Audit (Non - NABC Accredited)",
     shortDesc:
       "Objective, documented evaluation of an organization's environmental performance and sustainability compliance.",
+
     points: [
       "Regulatory & legal compliance review",
       "Environmental impact identification",
       "Sustainability performance assessment",
       "Corrective action & risk report",
     ],
+
+    detailContent: {
+      introduction: `
+Brajvidhya Services provides professional Environmental Audit services to help organizations assess their environmental performance, ensure regulatory compliance, and promote sustainable practices.
+
+Our audits focus on identifying environmental risks, improving resource efficiency, waste management, pollution control, and compliance with environmental standards and government regulations.
+
+We deliver reliable assessments and practical recommendations that support businesses in achieving environmental responsibility and sustainable growth.
+    `,
+
+      objectives: [
+        "Assess environmental performance",
+        "Ensure regulatory compliance",
+        "Promote sustainable business practices",
+        "Improve resource efficiency",
+        "Reduce environmental risks",
+        "Support sustainable growth"
+      ],
+
+      services: [
+        "Environmental Compliance Audit",
+        "Waste Management Assessment",
+        "Pollution Control Evaluation",
+        "Energy & Resource Efficiency Review",
+        "Sustainability Reporting Support",
+        "Environmental Risk Assessment"
+      ],
+
+      benefits: [
+        "Improved environmental compliance",
+        "Better waste management practices",
+        "Enhanced sustainability performance",
+        "Reduced environmental risks",
+        "Improved resource utilization",
+        "Support for ESG and sustainability goals"
+      ]
+    },
+
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -177,9 +521,8 @@ export const services = [
         strokeLinejoin="round"
         className="w-7 h-7"
       >
-        {" "}
-        <path d="M12 22V12M12 12C12 7 7 5 7 5a5 5 0 0 1 10 0c0 0-5 2-5 7z" />{" "}
-        <path d="M5 22c0-3 2-5 7-5s7 2 7 5" />{" "}
+        <path d="M12 22V12M12 12C12 7 7 5 7 5a5 5 0 0 1 10 0c0 0-5 2-5 7z" />
+        <path d="M5 22c0-3 2-5 7-5s7 2 7 5" />
       </svg>
     ),
   },
@@ -195,6 +538,74 @@ export const services = [
       "Place of Worship audits",
       "2-year certification validity",
     ],
+    detailContent: {
+      introduction: `
+Brajvidhya Services Private Limited supports the Eat Right Initiative by promoting safe, healthy, and sustainable food practices in organizations, institutions, workplaces, and food businesses.
+
+The initiative focuses on improving food safety standards, encouraging balanced nutrition, and creating awareness about healthy eating habits for a healthier society.
+
+Our services help institutions and businesses maintain hygiene, food quality, and compliance with food safety guidelines while building a culture of wellness and nutrition awareness.
+  `,
+
+      objectives: [
+        "Promote safe and hygienic food practices",
+        "Encourage healthy and balanced nutrition",
+        "Improve food safety standards",
+        "Create awareness about healthy eating habits",
+        "Support sustainable food practices",
+        "Build a culture of wellness and nutrition awareness"
+      ],
+
+      services: [
+        "Food Safety & Hygiene Assessment",
+        "Healthy Canteen & Kitchen Evaluation",
+        "Nutrition & Wellness Awareness Programs",
+        "Safe Food Handling Practices",
+        "Clean Drinking Water & Sanitation Review",
+        "Waste Management & Sustainable Food Practices",
+        "Staff Training on Food Safety Standards",
+        "Compliance Support for Food Safety Guidelines",
+        "Health & Nutrition Campaigns",
+        "Awareness Workshops for Schools, Offices & Institutions"
+      ],
+
+      coverage: [
+        "Safe and hygienic food preparation",
+        "Balanced and nutritious diet promotion",
+        "Reduction of food contamination risks",
+        "Healthy workplace and institutional food environments",
+        "Sustainable and eco-friendly food practices",
+        "Public health and wellness awareness",
+        "Improvement of overall food quality standards"
+      ],
+
+      feeTable: [
+        {
+          initiative: "Eat Right Campus",
+          fee: "₹15,000"
+        },
+        {
+          initiative: "Eat Right Place of Worship",
+          fee: "₹15,000"
+        },
+        {
+          initiative: "Eat Right Station",
+          fee: "₹20,000"
+        },
+        {
+          initiative: "Eat Right School",
+          fee: "₹20,000"
+        },
+        {
+          initiative: "Eat Right Street Food Hub",
+          fee: "₹1,500 per FBO"
+        },
+        {
+          initiative: "Eat Right Fruit & Vegetable",
+          fee: "₹1,500 per FBO"
+        }
+      ]
+    },
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -223,6 +634,49 @@ export const services = [
       "Safety procedure gap analysis",
       "Corrective action reporting",
     ],
+    detailContent: {
+      introduction: `
+Brajvidhya Services Private Limited provides comprehensive Safety Audit and Inspection Services to help organizations maintain a safe, healthy, and compliant working environment.
+
+Our safety assessments identify workplace hazards, evaluate safety practices, and ensure adherence to industrial safety standards and regulatory requirements.
+
+We focus on minimizing risks, preventing accidents, improving operational safety, and promoting a strong safety culture across industries, institutions, offices, and project sites.
+  `,
+
+      objectives: [
+        "Identify workplace hazards and unsafe practices",
+        "Evaluate safety management systems",
+        "Prevent accidents and reduce operational risks",
+        "Improve workplace safety performance",
+        "Ensure compliance with safety regulations",
+        "Promote a strong safety culture"
+      ],
+
+      services: [
+        "Workplace Safety Assessment",
+        "Hazard Identification & Risk Analysis",
+        "Fire Safety Inspection",
+        "Electrical Safety Audit",
+        "Machinery & Equipment Safety Check",
+        "PPE Compliance Review",
+        "Emergency Preparedness & Evacuation Assessment",
+        "Housekeeping & Workplace Hygiene Inspection",
+        "Compliance with Safety Rules & Regulations",
+        "Safety Documentation & Reporting",
+        "Corrective & Preventive Action Recommendations",
+        "Employee Safety Awareness & Training Support"
+      ],
+
+      coverage: [
+        "Identification of unsafe conditions and practices",
+        "Evaluation of safety management systems",
+        "Inspection of fire protection and emergency systems",
+        "Review of workplace health and safety procedures",
+        "Risk reduction and accident prevention measures",
+        "Monitoring compliance with legal and industrial safety standards",
+        "Improvement of workplace safety performance and employee well-being"
+      ]
+    },
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -240,32 +694,72 @@ export const services = [
     ),
   },
   {
-  num: "09",
-  badgeImg: safetyLogo, // replace with your own logo if available
-  title: "Verification & Validation",
-  shortDesc:
-    "Independent TPIA verification and validation services for systems, processes, and operational compliance.",
-  points: [
-    "Third Party Inspection Agency (TPIA) services",
-    "System & process compliance verification",
-    "Operational effectiveness validation",
-    "Risk identification & continual improvement",
+    num: "09",
+    badgeImg: safetyLogo, // replace with your own logo if available
+    title: "Verification & Validation",
+    shortDesc:
+      "Independent TPIA verification and validation services for systems, processes, and operational compliance.",
+    points: [
+      "Third Party Inspection Agency (TPIA) services",
+      "System & process compliance verification",
+      "Operational effectiveness validation",
+      "Risk identification & continual improvement",
+    ],
+    detailContent: {
+  introduction: `
+Brajvidhya Services Private Limited offers professional Verification & Validation (V&V) Services to ensure that systems, processes, products, and operational practices meet specified requirements, quality standards, and regulatory expectations.
+
+Our services help organizations improve reliability, accuracy, compliance, and overall performance through systematic evaluation and assessment.
+
+Verification focuses on confirming that processes and systems are developed and implemented correctly, while validation ensures that the final outcome fulfills intended objectives and operational needs.
+  `,
+
+  objectives: [
+    "Ensure compliance with specified requirements and standards",
+    "Improve reliability and operational performance",
+    "Verify implementation of systems and processes",
+    "Validate intended outcomes and effectiveness",
+    "Identify risks, gaps, and improvement opportunities",
+    "Support continuous improvement and quality assurance"
   ],
-  icon: (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="w-7 h-7"
-    >
-      <path d="M9 12l2 2 4-4" />
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-    </svg>
-  ),
+
+  services: [
+    "Process Verification & Compliance Review",
+    "Documentation Verification",
+    "Quality & Performance Assessment",
+    "System and Operational Validation",
+    "Data Accuracy & Record Validation",
+    "Inspection & Functional Evaluation",
+    "Regulatory and Standard Compliance Checks",
+    "Risk Identification & Gap Analysis",
+    "Corrective & Preventive Action Recommendations",
+    "Reporting and Technical Review Support"
+  ],
+
+  coverage: [
+    "Verification of procedures, records, and operational practices",
+    "Validation of systems, processes, and performance outcomes",
+    "Accuracy and consistency checks of data and documentation",
+    "Assessment of compliance with industry standards and regulations",
+    "Evaluation of effectiveness, reliability, and quality assurance measures",
+    "Identification of gaps, risks, and improvement opportunities"
+  ]
 },
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-7 h-7"
+      >
+        <path d="M9 12l2 2 4-4" />
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
+  },
 ];
 
 // ── WHY US ──────────────────────────────────────────────────
@@ -386,6 +880,9 @@ const whyUs = [
 const ServiceCard = ({ s }) => {
   const [hovered, setHovered] = useState(false);
   return (
+    <Link
+          to={`/services/${s.num}`}
+        >
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -510,7 +1007,7 @@ const ServiceCard = ({ s }) => {
 
         {/* CTA */}
         <Link
-         to={`/services/${s.num}`}
+          to={`/services/${s.num}`}
           className="flex items-center gap-1.5 text-[12px] font-black transition-all duration-300 mt-auto w-fit"
           style={{ color: hovered ? C.gold : C.green }}
         >
@@ -534,6 +1031,7 @@ const ServiceCard = ({ s }) => {
         </Link>
       </div>
     </div>
+    </Link>
   );
 };
 

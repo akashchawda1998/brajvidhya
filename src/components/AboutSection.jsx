@@ -11,13 +11,13 @@ const stats = [
 const highlights = [
   {
     title: "Mission",
-    text: "To establish ourselves as a trusted partner and industry leader in management system inspection, acknowledged by both our clients and the wider community.",
+    text: "Our mission is to establish ourselves as a trusted partner and industry leader in Inspection & Certification and management system certification, acknowledged by both our clients and the wider community. In addition to actively participating in the growth of accredited Inspection & Certification and other assurance services, Brajvidhya Services also aims to be involved in the digital economy.",
     icon: "🎯",
     color: "#b8962e",
   },
   {
     title: "Vision",
-    text: "To provide high quality inspection services carried out with discretion, avoiding conflicts of interest, with a team of experienced inspectors conforming to ISO/IEC 17020:2012.",
+    text: "Brajvidhya Services Private Limited, through its independent entity – Brajvidhya Services Pvt Ltd (Inspection & Certification body) aims to provide high quality Inspection & Certification services that are carried out with discretion, avoiding any conflicts of interest or impartiality with the help of team of experienced inspectors, industry experts and equipment conforming to the ISO/IEC 17020:2012 & ISO 17021-1:2015 standards and industry regulations.",
     icon: "👁️",
     color: "#1a5c8a",
   },

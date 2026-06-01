@@ -1,7 +1,7 @@
 export const services = [
   {
     num: "01",
-    title: "FSSAI jnkgnnkfj Third Party Audit",
+    title: "FSSAI  Third Party Audit",
     shortDesc: "Independent food safety compliance audits recognized by FSSAI.",
     description:
       "A third-party food audit is an independent evaluation by an external agency to ensure a food business complies with safety and quality standards like HACCP, ISO 22000, or BRCGS. We verify compliance with national and international food safety standards.",
@@ -37,7 +37,7 @@ export const services = [
   },
   {
     num: "04",
-    title: "Energy Audit / Inspection",
+    title: "",
     shortDesc: "Systematic energy flow analysis to identify savings.",
     description:
       "A systematic inspection, survey, and analysis of energy flows within a building or process. We identify inefficiencies and recommend solutions to reduce waste and save costs.",

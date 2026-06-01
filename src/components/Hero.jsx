@@ -36,11 +36,11 @@ const badges = [
     full: "National Dairy Inspection Enterprise",
     img: ndieLogo,
   },
-  {
-    name: "BEE",
-    full: "Bureau of Energy Efficiency",
-    img: beeLogo,
-  },
+  // {
+  //   name: "BEE",
+  //   full: "Bureau of Energy Efficiency",
+  //   img: beeLogo,
+  // },
   {
     name: "MSME",
     full: "Ministry of Micro, Small & Medium Enterprises",
